@@ -8,7 +8,7 @@ function Banner() {
     <header className="logoNav">
     <div className="navBar">
         <div className="logo">
-            <a href="#">Mobel</a>
+            <a href="#"> Möbel </a>
         </div>
 
         <div className="nav">

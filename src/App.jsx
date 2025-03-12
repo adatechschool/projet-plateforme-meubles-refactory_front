@@ -1,6 +1,6 @@
-//import Banner from './components/Banner.jsx'
+import Banner from './components/Banner.jsx'
 import CartItem from './components/CartItem.jsx'
-//import Background from './components/Background.jsx'
+import Background from './components/Background.jsx'
 //import { createBrowerRouter, RouterProvider } from 'react-router-dom'
 //import { createRoot } from 'react-dom/client'
 
@@ -17,9 +17,8 @@ import CartItem from './components/CartItem.jsx'
 function App() {
   return (
     <>
-    <CartItem></CartItem>
-      {/*<Banner />
-      <Background/>*/}
+    <Banner />
+    <Background/>
     </>
   )
   //return <RouterProvider router={router} />

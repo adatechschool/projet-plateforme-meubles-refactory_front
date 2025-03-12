@@ -27,7 +27,7 @@ header{
 }
 .logo a {
     color: #749659;
-    font-family: poppins;
+    font-family: "poppins", sans-serif;
     font-weight: bold;
     font-size: 2.5rem;
     margin: 0;
@@ -44,9 +44,9 @@ header{
     list-style: none;
 }
 .navList a{
-    font-family: popins;
-    font-size: 1.0rem;
-    font-weight: bold;
+    font-family: "poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 550;
     color: black;
 }
 a{
