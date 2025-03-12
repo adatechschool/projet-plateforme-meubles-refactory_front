@@ -1,9 +1,11 @@
 import './styles/App.css'
+import ProductDetails from "./pages/Product_details.jsx";
 
 function App() {
 
   return (
     <>
+        <ProductDetails />
     </>
   )
 }
