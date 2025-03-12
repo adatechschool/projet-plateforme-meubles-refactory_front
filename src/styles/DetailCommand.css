@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h2{
+    text-align: left;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.border-bottom-h2{
+    color: #999999;
+    margin-bottom: 15px;
+    border-bottom: solid 1px;
+}
+
+.border-bottom-delivery{
+    color: #999999;
+    margin-bottom: 15px;
+    border-bottom: solid 1px;
+}
+
+.container-detail-command{
+    width: 450px;
+    height: 650px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-family: "poppins", sans-serif;
+}
+
+.display-nb-article, .display-subtitle, .display-tva, .display-delivery, .display-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitle{
+    font-weight: 600;
+}
+
+.livraison{
+    font-size: 12px;
+    color: #999999;
+}
+
+.total{
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.payment-button{
+    all: unset;
+    width: 160px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    justify-content:right;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #749659;
+}
+
+.code-promo{
+    height: 40px;
+    padding: 5px;
+    border: solid;
+    color: #999999;
+    background-color: white;
+    border-radius: 50px;
+    border-color: #999999 ;
+}
+
+.code-promo > p{
+    font-size: 12px;
+}
