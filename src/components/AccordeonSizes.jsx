@@ -1,5 +1,5 @@
 import {useState} from "react";
-import '../styles/details/accordeonSizes.css';
+import '../styles/detailsProduct/accordeonSizes.css';
 import { FaChevronUp } from "react-icons/fa";
 
 export default function AccordeonSizes() {

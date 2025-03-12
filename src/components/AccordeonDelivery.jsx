@@ -1,5 +1,5 @@
 import {useState} from "react";
-import '../styles/details/accordeonDelivery.css';
+import '../styles/detailsProduct/accordeonDelivery.css';
 import { FaChevronUp } from "react-icons/fa";
 
 export default function AccordeonDelivery() {
