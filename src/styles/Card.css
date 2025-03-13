@@ -11,6 +11,13 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.center-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* pour centrer verticalement sur toute la hauteur */
+    margin: 0;
+}
 
 .container-all-cards{
     gap: 20px;
