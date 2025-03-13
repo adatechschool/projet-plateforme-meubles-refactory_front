@@ -1,7 +1,9 @@
+import Product from "./components/Product.jsx";
+
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Accueil />
+    element: <Product />
   },
   // {
   //   path: '/card',
@@ -15,10 +17,10 @@ const router = createBrowserRouter([
   //   path: '/footer',
   //   element: <Footer />
   // },
-   {
-    path: '/detailcommand',
-    element: <DetailCommand />
-  },
+  //  {
+  //   path: '/detailcommand',
+  //   element: <DetailCommand />
+  // },
   // {
   //   path: '/detailcommand',
   //   element: <Banner />
