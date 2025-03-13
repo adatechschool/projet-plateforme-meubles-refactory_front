@@ -1,9 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 
+
+
 function Card(){
     const navigate = useNavigate();
 
     return (
+        <div className='center-cards'>
         <div className="container-all-cards">
         <div className="container-card">
             <div className="img-card"></div>
@@ -71,7 +74,8 @@ function Card(){
                 <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
-        </div>   
+        </div> 
+        </div>  
     )
 }
 export default Card
