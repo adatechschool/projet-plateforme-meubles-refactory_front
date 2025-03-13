@@ -1,7 +1,7 @@
 import Accordion from "./Accordion.jsx";
-import Banner from "./Banner.jsx";
-import Footer from "./accueil/Footer.jsx";
-import '../styles/Product.css';
+import Banner from "../Banner.jsx";
+import Footer from "../accueil/Footer.jsx";
+import '../../styles/Product.css';
 
 export default function Product() {
     return (

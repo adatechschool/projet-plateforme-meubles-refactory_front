@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FaChevronUp } from 'react-icons/fa';
-import '../styles/Accordion.css';
+import '../../styles/Accordion.css';
 
 export default function Accordion({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
