@@ -1,7 +1,7 @@
 import '../styles/Banner.css'
-import userConnextion from '../icons/user.png'
-import panier from '../icons/shopping-cart.png'
-import recherche from '../icons/loupe.png'
+import userConnextion from '../assets/icons/user.png'
+import panier from '../assets/icons/shopping-cart.png'
+import recherche from '../assets/icons/loupe.png'
 
 function Banner() {
   return (

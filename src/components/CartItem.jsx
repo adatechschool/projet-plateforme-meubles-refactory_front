@@ -1,6 +1,6 @@
 import '../styles/CartItem.css';
 import fauteuil from '../img/behnam-norouzi-phXwnWWz-BM-unsplash.jpg';
-import poubelle from'../icons/poubelle-de-recyclage.png'
+import poubelle from'../assets/icons/poubelle-de-recyclage.png'
 function CartItem() {
   return (
   <div className="cart-item-body">
