@@ -1,7 +1,7 @@
 import Banner from '../Banner';
 import Background from '../Background';
 import FurnitureFilter from './FurnitureFilter';
-import Card from './Card';
+import Card from './CardList';
 import Footer from './Footer';
 
 function Accueil() {

@@ -4,12 +4,12 @@ function FurnitureFilter(){
                 <h2 className="tendances">Dernières tendances</h2>
 
                 <ul className="filter-content">
-                    <li><a href="#">Chaises</a></li>
-                    <li><a href="#">Armoires</a></li>
-                    <li><a href="#">Canapés</a></li>
-                    <li><a href="#">Tables</a></li>
-                    <li><a href="#">Lampes</a></li>
-                    <li><a href="#">Accessoires</a></li>
+                    <li><a>Chaises</a></li>
+                    <li><a>Armoires</a></li>
+                    <li><a>Canapés</a></li>
+                    <li><a>Tables</a></li>
+                    <li><a>Lampes</a></li>
+                    <li><a>Accessoires</a></li>
                 </ul>
             </div>
     );
