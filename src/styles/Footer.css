@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container-footer {
+    padding: 15px;
+    background-color: #749659;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo-footer {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "poppins", sans-serif;
+}
+
+.social-container {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a.fb{
+    width: 40px;
+    height: 40px;
+	content: url(../assets/icons/facebook.png);
+}
+
+a.in{
+    width: 40px;
+    height: 40px;
+	content: url(../assets/icons/instagram.png);
+}
+
+a.pn{
+    width: 40px;
+    height: 40px;
+	content: url(../assets/icons/pinterest.png);
+}

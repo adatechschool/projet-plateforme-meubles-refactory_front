@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container-all-cards{
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 1280px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.container-card{ /*permet de placer l'icône panier par-dessus*/
+    position: relative;
+}
+    
+.img-card{
+    width: 320px;
+    height: 330px;
+    background: url(../assets/fauteuil-poang.jpg) center, no-repeat;
+    background-size: cover;
+}
+
+.container-name-price-card{
+    display: flex;
+    text-transform: uppercase;
+    padding: 10px 10px 15px 10px;
+    justify-content: space-between;
+}
+
+.description-card{
+    width: 320px;
+    height: 100px;
+    box-shadow: 0px 2px 2px gainsboro;
+}
+
+.name-card, .price-card{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+}
+
+.description-text-card{
+    margin: 0;
+    font-size: 13px;
+    padding: 0px 10px 0 10px;
+}
+
+.shopping-cart-button{
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    background-image: url('../assets/icons/shopping-cart-button.png');
+    transition: background-image 0.3s ease;
+    background-size: cover;
+    top: 270px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.shopping-cart-button:hover{
+    background-image: url('../assets/icons/shopping-cart-button-hover.png');
+}
