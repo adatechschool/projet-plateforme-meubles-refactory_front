@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 
-fetch('https://dummyjson.com/products')
-    .then((response) => {
-   return response.json()
-    })
-    response.then((result) => {
-        console.log(result)
-})
+//fetch('https://dummyjson.com/products')
+//    .then((response) => {
+//   return response.json()
+//    })
+//    response.then((result) => {
+//        console.log(result)
+//})
 
 function Card(){
     const navigate = useNavigate();
