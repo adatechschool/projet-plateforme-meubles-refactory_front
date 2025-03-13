@@ -1,15 +1,21 @@
-import Accordion from "./Accordion.jsx";
+import Accordion from "../components/product/Accordion.jsx";
+import Footer from "../components/general/Footer.jsx";
+import Banner from "../components/general/Banner.jsx";
 
-export default function Dimensions() {
+export default function Product() {
     return (
-        <Accordion title="Dimensions">
-            {/* Contenu personnalisé */}
-            <p><strong>Largeur : </strong>68 cm</p>
-            <p><strong>Profondeur : </strong>82 cm</p>
-            <p><strong>Hauteur : </strong>100 cm</p>
-            <p><strong>Larg. assise : </strong>56 cm</p>
-            <p><strong>Prof. assise : </strong>50 cm</p>
-            <p><strong>Haut. assise : </strong>42 cm</p>
-        </Accordion>
+        <div>
+            <Banner />
+            <Accordion title="Description">
+                Description du produit
+            </Accordion>
+            <Accordion title="Dimensions">
+                Dimension
+            </Accordion>
+            <Accordion title="Livraison">
+                Livraison
+            </Accordion>
+            <Footer />
+        </div>
     );
 }

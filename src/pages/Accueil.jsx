@@ -1,6 +1,6 @@
-import FurnitureFilter from './FurnitureFilter'
-import Card from './Card';
-import Footer from './Footer'
+import FurnitureFilter from '../components/accueil/FurnitureFilter.jsx'
+import Card from '../components/accueil/Card.jsx';
+import Footer from '../components/general/Footer.jsx'
 
 function Accueil() {
     return (

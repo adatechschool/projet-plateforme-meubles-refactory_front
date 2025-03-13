@@ -1,4 +1,4 @@
-import truckIcon from '../assets/icons/delivery-truck.png';
+import truckIcon from '../../assets/icons/delivery-truck.png';
 
 function DetailCommand(){
     return (
