@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.detail-title{
+    text-align: left;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+p{
+    margin: 10px;
+}
+
+/* bodures */
+.border-bottom-h2{
+    color: #999999;
+    margin-bottom: 15px;
+    border-bottom: solid 1px;
+}
+.border-bottom-delivery{
+    color: #999999;
+    margin-bottom: 15px;
+    border-bottom: solid 1px;
+}
+
+/* conteneur général */
+.container-detail-command{
+    width: 420px;
+    height: 580px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    font-family: "poppins", sans-serif;
+}
+
+.display-nb-article, .display-subtitle, .display-tva, .display-delivery, .display-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subtitle{
+    margin: 0;
+    font-weight: 600;
+}
+
+/* livraison */
+.delivery-info{
+    margin: 0;
+    display: flex;
+    color: #999999;
+    font-size: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.truck-icon{
+    margin-right: 10px;
+    width: 20px; 
+    height: 20px;
+}
+
+/* total */
+.total{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* bouton */
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+.payment-button{
+    all: unset;
+    width: 230px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #749659;
+}
+.payment-button:hover{
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+/* code promo */
+.code-promo{
+    height: 40px;
+    display: flex;
+    padding-left: 14px;
+    color: #999999;
+    border: solid 2px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: left;
+    border-color: #999999;
+    background-color: white;
+}
+.subtitle-code-promo{
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+.code-promo{
+    font-size: 13px;
+}

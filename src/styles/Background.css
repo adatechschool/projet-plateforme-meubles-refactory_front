@@ -1,0 +1,7 @@
+.backgroundBody{
+    background: url(../img/background5.png) center, no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
