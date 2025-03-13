@@ -1,13 +1,21 @@
-import cartButton from '../assets/icons/shopping-cart-button.png'
+import { useNavigate } from 'react-router-dom';
+
+fetch('https://dummyjson.com/products')
+    .then((response) => {
+   return response.json()
+    })
+    response.then((result) => {
+        console.log(result)
+})
 
 function Card(){
+    const navigate = useNavigate();
+
     return (
         <div className="container-all-cards">
         <div className="container-card">
             <div className="img-card"></div>
-            <button className="shopping-cart-button">
-            <img src={cartButton} alt='shopping cart button' className='shopping-cart-button' />
-            </button>
+            <button className="shopping-cart-button" onClick={() => navigate('/detailcommand')}></button>
             <div className="description-card">
                 <div className="container-name-price-card">
                 <p className="name-card">Fauteuil noir</p>
@@ -18,9 +26,7 @@ function Card(){
         </div>
         <div className="container-card">
             <div className="img-card"></div>
-            <button className="shopping-cart-button">
-            <img src={cartButton} alt='shopping cart button' className='shopping-cart-button' />
-            </button>
+            <button className="shopping-cart-button"></button>
             <div className="description-card">
                 <div className="container-name-price-card">
                 <p className="name-card">Fauteuil noir</p>
@@ -31,9 +37,7 @@ function Card(){
         </div>
         <div className="container-card">
             <div className="img-card"></div>
-            <button className="shopping-cart-button">
-            <img src={cartButton} alt='shopping cart button' className='shopping-cart-button' />
-            </button>
+            <button className="shopping-cart-button"></button>
             <div className="description-card">
                 <div className="container-name-price-card">
                 <p className="name-card">Fauteuil noir</p>
@@ -44,9 +48,7 @@ function Card(){
         </div>
         <div className="container-card">
             <div className="img-card"></div>
-            <button className="shopping-cart-button">
-            <img src={cartButton} alt='shopping cart button' className='shopping-cart-button' />
-            </button>
+            <button className="shopping-cart-button"></button>
             <div className="description-card">
                 <div className="container-name-price-card">
                 <p className="name-card">Fauteuil noir</p>
@@ -57,9 +59,7 @@ function Card(){
         </div>
         <div className="container-card">
             <div className="img-card"></div>
-            <button className="shopping-cart-button">
-            <img src={cartButton} alt='shopping cart button' className='shopping-cart-button' />
-            </button>
+            <button className="shopping-cart-button"></button>
             <div className="description-card">
                 <div className="container-name-price-card">
                 <p className="name-card">Fauteuil noir</p>
@@ -70,9 +70,7 @@ function Card(){
         </div>
         <div className="container-card">
             <div className="img-card"></div>
-            <button className="shopping-cart-button">
-            <img src={cartButton} alt='shopping cart button' className='shopping-cart-button' />
-            </button>
+            <button className="shopping-cart-button"></button>
             <div className="description-card">
                 <div className="container-name-price-card">
                 <p className="name-card">Fauteuil noir</p>
@@ -81,7 +79,6 @@ function Card(){
                 <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
-
         </div>   
     )
 }
