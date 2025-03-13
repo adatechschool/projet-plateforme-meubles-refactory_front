@@ -1,4 +1,4 @@
-import './Description.css'; // Chemin relatif vers votre fichier CSS
+import '../styles/detailsProduct/Description.css'; // Chemin relatif vers votre fichier CSS
 
 export default function Description() {
     return (
