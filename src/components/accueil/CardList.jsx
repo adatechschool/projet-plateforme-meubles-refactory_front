@@ -34,7 +34,6 @@ function CardList(){
 //fetchData();
 
 console.log("liste de produits", products);
-    const navigate = useNavigate();
 
     return (
      

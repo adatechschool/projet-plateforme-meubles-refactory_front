@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 function CardItem({product}){
+    const navigate = useNavigate();
 
     return(
         <div className="container-card">
