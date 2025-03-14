@@ -1,13 +1,3 @@
-
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Accueil from './components/accueil/Accueil'
-import Banner from './components/Banner'
-import Background from './components/Background'
-import FurnitureFilter from './components/accueil/FurnitureFilter'
-import Card from './components/accueil/CardList';
-import Footer from './components/accueil/Footer'
-import DetailCommand from './components/DetailCommand'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Accueil from './components/accueil/Accueil';
 import Panier from "./components/Panier";
