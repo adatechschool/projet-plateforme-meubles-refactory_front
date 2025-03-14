@@ -34,9 +34,7 @@
     
 .img-card{
     width: 320px;
-    height: 330px;
-    background: url(../assets/fauteuil-poang.jpg) center, no-repeat;
-    background-size: cover;
+    height: 320px;
 }
 
 .container-name-price-card{
