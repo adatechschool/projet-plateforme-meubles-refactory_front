@@ -13,12 +13,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 function CardItem({product}){
-    console.log("je suis appelé", product)
 
     return(
         <div className="container-card">
-        <div className="img-card"></div>
-      
+        <img className="img-card" src={product.images} alt={product.name} />
         <button className="shopping-cart-button" onClick={() => navigate('/detailcommand')}></button>
         <div className="description-card">
             <div className="container-name-price-card">
