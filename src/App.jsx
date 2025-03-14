@@ -3,30 +3,6 @@ const router = createBrowserRouter([
     path: '/',
     element: <Accueil />
   },
-  // {
-  //   path: '/card',
-  //   element: <Card />
-  // },
-  // {
-  //   path: '/furniturefilter',
-  //   element: <FurnitureFilter />
-  // },
-  // {
-  //   path: '/footer',
-  //   element: <Footer />
-  // },
-   {
-    path: '/detailcommand',
-    element: <DetailCommand />
-  },
-  // {
-  //   path: '/detailcommand',
-  //   element: <Banner />
-  // },
-  // {
-  //   path: '/detailcommand',
-  //   element: <Background />
-  // },
 ])
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
