@@ -1,9 +1,9 @@
-import Product from "./components/product/Product.jsx";
 
+import Acceuil from "./components/acceuil/Acceuil";
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Accueil />
+    element: <Acceuil />
   }
 ])
 
