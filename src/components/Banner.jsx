@@ -22,7 +22,7 @@ function Banner() {
             </nav>
         </div>
 
-        <div className="ButtonsLink" class="buttons">
+        <div className="ButtonsLink">
             <a className='buttonRecherche' href="#"><img src={recherche} alt="" /></a>
             <a className='buttonPanier' href="#"><img src={panier} alt="" /></a>
             <a className='buttonConnexion' href="#"><img src={userConnextion} alt="" /></a>
