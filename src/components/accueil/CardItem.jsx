@@ -17,7 +17,7 @@ function CardItem({product}){
     return(
         <div className="container-card">
         <img className="img-card" src={product.images} alt={product.name} />
-        <button className="shopping-cart-button" onClick={() => navigate('/detailcommand')}></button>
+        <button className="shopping-cart-button" onClick={() => navigate('/panier')}></button>
         <div className="description-card">
             <div className="container-name-price-card">
             <p className="name-card">{product.name}</p>
