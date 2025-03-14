@@ -61,7 +61,7 @@ a:hover{
     justify-content: space-between;
     gap: 1.0rem;
 }
-.ButtonsLink a{
+.ButtonsLink{
     display: flex;
     /*justify-content: space-between;*/
     gap: 1.5rem;
