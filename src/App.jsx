@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Accueil from './components/accueil/Accueil';
+import Product from './components/product/Product';
 import Panier from "./components/Panier";
 
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/panier',
     element: <Panier/>
+  },
+  {
+    path: '/product',
+    element: <Product/>
   }
 ])
 

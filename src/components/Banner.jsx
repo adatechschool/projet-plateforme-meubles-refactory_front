@@ -8,13 +8,13 @@ function Banner() {
     <header className="logoNav">
     <div className="navBar">
         <div className="logo">
-            <a href="#"> Möbel </a>
+            <a href="/"> Möbel </a>
         </div>
 
         <div className="nav">
             <nav>
             <ul className='navList'>
-                <li><a href="#">ACCUEIL</a></li>
+                <li><a href="/">ACCUEIL</a></li>
                 <li><a href="#">TENDANCES</a></li>
                 <li><a href="#">COLLECTION</a></li>
                 <li><a href="#">QUI SOMMES-NOUS?</a></li>

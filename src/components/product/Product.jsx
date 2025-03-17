@@ -3,7 +3,7 @@ import Banner from "../Banner.jsx";
 import Footer from "../accueil/Footer.jsx";
 import '../../styles/Product.css';
 
-export default function Product() {
+function Product() {
     return (
         <div className="product-page">
             <Banner />
@@ -64,3 +64,4 @@ export default function Product() {
         </div>
     );
 }
+export default Product;
