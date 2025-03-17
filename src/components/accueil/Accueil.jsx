@@ -1,7 +1,7 @@
 import Banner from '../Banner';
 import Background from '../Background';
 import FurnitureFilter from './FurnitureFilter';
-import Card from './CardList';
+import CardList from './CardList';
 import Footer from './Footer';
 
 function Accueil() {
@@ -10,7 +10,7 @@ function Accueil() {
         <Banner />
         <Background />
         <FurnitureFilter />
-        <Card />
+        <CardList />
         <Footer />
       </div>
     );
