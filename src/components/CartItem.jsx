@@ -1,41 +1,42 @@
 import '../styles/CartItem.css';
-import fauteuil from '../img/behnam-norouzi-phXwnWWz-BM-unsplash.jpg';
-import poubelle from'../assets/icons/trash-panier.png'
 
-function CartItem() {
+function CartItem({ item, onRemove }) {
   return (
-  <div className="cart-item-body">
-    <img src={fauteuil} alt="" />
-    <div className='cart-item-info'>
+    <div className="cart-item-body">
+      <img src={item.image} alt={item.name} />
+      <div className='cart-item-info'>
 
         <div className='titre titrePrix '>
-          <p>Fauteuil moderne noir</p>
+          <p>{item.name}</p>
           <div className='cart-item-info-details prix'>
-            <p>68.00€</p>
+            <p>{item.price}€</p>
           </div>
         </div>
-    <div className='cart-item-info-groupe'>
-        <div  className='cart-item-info-details div1'>
-          <p className="titre">Catégorie:</p> 
-          <p> contemporain </p>
+
+        <div className='cart-item-info-groupe'>
+          <div className='cart-item-info-details div1'>
+            <p className="titre">Catégorie:</p> 
+            <p>{item.category || "Non spécifiée"}</p>
+          </div>
+
+          <div className='cart-item-info-details div2'>
+            <p className="titre">Couleur:</p>
+            <p>{item.color || "Non spécifiée"}</p>
+          </div>
+
+          <div className='cart-item-info-details div3'>
+            <p className="titre">Quantité:</p>
+            <p>1</p>
+          </div>
         </div>
 
-        <div  className='cart-item-info-details div2'>
-          <p className="titre">Couleur:</p>
-          <p> Noir</p>
-        </div>
-
-        <div  className='cart-item-info-details div3'>
-          <p className="titre">Quantity: </p>
-          <p>1</p>
-        </div>
-      </div>
-        <button className='buttonRemove'><img src={poubelle} alt="" /></button> 
+        <button className='buttonRemove' onClick={onRemove}>
+          <img src="../assets/icons/trash-panier.png" alt="Supprimer" />
+        </button> 
         
+      </div>
     </div>
-    
-    
-  </div>
   );
 }
+
 export default CartItem;
