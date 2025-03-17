@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Accueil from './components/accueil/Accueil';
 import Panier from "./components/Panier";
-// import Product from `./components/product/Product/${id}`;
+import Product from "./components/product/Product";
 
 
 import './styles/Card.css'
@@ -20,10 +20,10 @@ const router = createBrowserRouter([
     path: '/panier',
     element: <Panier/>
   },
-  // {
-  //   path: `/product/${id}`,
-  //   element: <Product/>
-  // }
+  {
+    path: "/product/:id",
+    element: <Product/>
+  }
 ])
 
 

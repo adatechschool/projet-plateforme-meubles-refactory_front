@@ -4,7 +4,7 @@ function DetailCommand(){
     return (
         <div>
         <div className="container-detail-command">
-            <h2 className='detail-title'>détail de votre commande</h2>
+            <h2 className='detail-title'>détail de votre commande </h2>
             <div className="border-bottom-h2"></div>
 
             <div className="display-nb-article">
