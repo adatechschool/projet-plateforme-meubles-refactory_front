@@ -1,85 +1,29 @@
+
+
 import { useNavigate } from 'react-router-dom';
 
-//fetch('https://dummyjson.com/products')
-//    .then((response) => {
-//   return response.json()
-//    })
-//    response.then((result) => {
-//        console.log(result)
-//})
-
-function Card(){
+function Card({ product }) {
     const navigate = useNavigate();
 
     return (
-        <div className="container-all-cards">
-        <div className="container-card">
-            <div className="img-card"></div>
-            <button className="shopping-cart-button" onClick={() => navigate('/detailcommand')}></button>
+        <div 
+            className="container-card transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+            onClick={() => navigate(`/product/${product.id}`)}
+        >
+            <img className="img-card" src={product.images} alt={product.name} />
+            <button className="shopping-cart-button" onClick={(e) => {
+                e.stopPropagation(); // Empêche la propagation du clic vers le container
+                navigate('/panier');
+            }}></button>
             <div className="description-card">
                 <div className="container-name-price-card">
-                <p className="name-card">Fauteuil noir</p>
-                <p className="price-card">39,00 €</p>
+                    <p className="name-card">{product.name}</p>
+                    <p className="price-card">{product.price}€</p>
                 </div>
-                <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className="description-text-card">{product.description}</p>
             </div>
         </div>
-        <div className="container-card">
-            <div className="img-card"></div>
-            <button className="shopping-cart-button"></button>
-            <div className="description-card">
-                <div className="container-name-price-card">
-                <p className="name-card">Fauteuil noir</p>
-                <p className="price-card">39,00 €</p>
-                </div>
-                <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div className="container-card">
-            <div className="img-card"></div>
-            <button className="shopping-cart-button"></button>
-            <div className="description-card">
-                <div className="container-name-price-card">
-                <p className="name-card">Fauteuil noir</p>
-                <p className="price-card">39,00 €</p>
-                </div>
-                <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div className="container-card">
-            <div className="img-card"></div>
-            <button className="shopping-cart-button"></button>
-            <div className="description-card">
-                <div className="container-name-price-card">
-                <p className="name-card">Fauteuil noir</p>
-                <p className="price-card">39,00 €</p>
-                </div>
-                <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div className="container-card">
-            <div className="img-card"></div>
-            <button className="shopping-cart-button"></button>
-            <div className="description-card">
-                <div className="container-name-price-card">
-                <p className="name-card">Fauteuil noir</p>
-                <p className="price-card">39,00 €</p>
-                </div>
-                <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        <div className="container-card">
-            <div className="img-card"></div>
-            <button className="shopping-cart-button"></button>
-            <div className="description-card">
-                <div className="container-name-price-card">
-                <p className="name-card">Fauteuil noir</p>
-                <p className="price-card">39,00 €</p>
-                </div>
-                <p className="description-text-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-        </div>   
-    )
+    );
 }
-export default Card
+
+export default Card;
