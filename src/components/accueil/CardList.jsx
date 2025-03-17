@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CardItem from './CardItem';
+import Card from './Card';
 
 
 // fetch('https://dummyjson.com/products')
@@ -39,8 +39,8 @@ console.log("liste de produits", products);
      
         <div className='center-cards'>
         <div className="container-all-cards">
-        { products.map((productItem) => (
-        <CardItem key={productItem.id} product={productItem}/>)
+        { products.map((product) => (
+        <Card key={product.id} product={product}/>)
        )}
         
        

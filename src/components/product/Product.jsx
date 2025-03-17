@@ -2,8 +2,26 @@ import Accordion from "./Accordion.jsx";
 import Banner from "../Banner.jsx";
 import Footer from "../accueil/Footer.jsx";
 import '../../styles/Product.css';
+import { useState, useEffect } from "react";
+import { useParams} from "react-router-dom";
+
 
 function Product() {
+    const {id} = useParams();
+    console.log("id", id);
+
+    const [product, setProduct] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+             const response = await fetch(`http://localhost:3000/product/${id}`);
+             const data = await response.json();
+             setProduct(data[0])
+        }
+        fetchData();
+    }, [id]);
+
+    console.log("produit", product)
     return (
         <div className="product-page">
             <Banner />
@@ -11,10 +29,10 @@ function Product() {
             {/* Nouvelle section produit */}
             <div className="product-info">
                 <div className="product-category">FAUTEUIL / CONTEMPORAIN</div>
-                <h1 className="product-title">FAUTEUIL MODERNE NOIR</h1>
+                <h1 className="product-title">{product.name}</h1>
 
                 <div className="product-pricing">
-                    <p className="price">59,00 €</p>
+                    <p className="price">{product.price}</p>
                     <p className="delivery-info">Livraison en 3 jours</p>
                 </div>
 

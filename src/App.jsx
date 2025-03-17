@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <Panier/>
   },
   {
-    path: '/product',
+    path: '/product/:id',
     element: <Product/>
   }
 ])
