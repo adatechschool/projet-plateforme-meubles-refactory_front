@@ -3,15 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import Card from './Card';
 
 
-// fetch('https://dummyjson.com/products')
-//     .then((response) => {
-//    return response.json()
-//     })
-//     response.then((result) => {
-//         console.log(result)
-// })
-
-
 
 function CardList(){
 
@@ -31,8 +22,6 @@ function CardList(){
     };
     fetchData();
     }, []);
-//fetchData();
-
 console.log("liste de produits", products);
 
     return (
