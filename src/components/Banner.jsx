@@ -26,7 +26,7 @@ function Banner() {
         <div className="ButtonsLink">
             <a className='buttonRecherche' href="#"><img src={recherche} alt="" /></a>
             <Link className="buttonPanier" to="/panier"><img src={panier} alt="Panier" /></Link>
-            <a className='buttonConnexion' href="#"><img src={userConnextion} alt="" /></a>
+            <Link className='buttonConnexion' to="/connexion"><img src={userConnextion} alt="" /></Link>
         </div>
     </div>
 
