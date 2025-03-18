@@ -59,3 +59,31 @@ a{
 font-weight: 600;
 text-decoration: underline;
 }
+.connexion-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacement entre les inputs */
+}
+
+.connexion-inputs input {
+    all: unset;
+    width: 230px; /* Même largeur que le bouton connexion */
+    height: 40px;
+    padding-left: 230px;
+    color: #999999;
+    border: solid 2px #999999;
+    border-radius: 50px;
+    background-color: white;
+    font-size: 13px;
+    text-align: left;
+}
+
+.connexion-inputs input:focus {
+    border-color: #749659;
+    outline: none;
+}
+
+.connexion-inputs input::placeholder {
+    color: #999999;
+    opacity: 0.7;
+}
