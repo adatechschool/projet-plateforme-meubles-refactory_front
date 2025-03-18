@@ -6,7 +6,7 @@ function DetailCommand(){
     return (
         <div>
         <div className="container-detail-command">
-            <h2 className='detail-title'>détail de votre commande</h2>
+            <h2 className='detail-title'>détail de votre commande </h2>
             <div className="border-bottom-h2"></div>
 
             <div className="display-nb-article">
@@ -40,7 +40,7 @@ function DetailCommand(){
             <div>
                 <p className="subtitle-code-promo">Code promo</p>
                 <div>
-                    <p className="code-promo">Entrez votre code promo</p>
+                <input className="code-promo" placeholder='Entrez votre code promo' />
                 </div>
             </div>
         </div>

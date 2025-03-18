@@ -2,9 +2,13 @@ import '../styles/CartItem.css';
 
 function CartItem({ item, onRemove }) {
   return (
-    <div className="cart-item-body">
-      <img src={item.image} alt={item.name} />
-      <div className='cart-item-info'>
+    <div>
+      <h2 className='title-panier'>Votre panier</h2>
+      <div className="border-bottom-h2"></div>
+
+  <div className="cart-item-body">
+    <img src={fauteuil} alt="" />
+    <div className='cart-item-info'>
 
         <div className='titre titrePrix '>
           <p>{item.name}</p>
@@ -30,12 +34,22 @@ function CartItem({ item, onRemove }) {
           </div>
         </div>
 
-        <button className='buttonRemove' onClick={onRemove}>
-          <img src="../assets/icons/trash-panier.png" alt="Supprimer" />
-        </button> 
+        <div  className='cart-item-info-details div2'>
+          <p className="titre">Couleur:</p>
+          <p> Noir</p>
+        </div>
+
+        <div  className='cart-item-info-details div3'>
+          <p className="titre">Quantité: </p>
+          <p>1</p>
+        </div>
+      </div>
+        <button className='buttonRemove'><img src={poubelle} alt="" /></button> 
         
       </div>
     </div>
+    
+  
   );
 }
 

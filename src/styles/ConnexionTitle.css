@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.title-container{
+    display: flex;
+    margin-top: 50px;
+    width: 500px;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.connexion-title{
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-left: 6px;
+    margin-bottom: 6px;
+}
+span{
+    color: 749659;
+    text-transform: capitalize;
+}
+
+.paragraph-text{
+margin-bottom: 50px;
+}
+
+.border-bottom-h2{
+    border-bottom: solid 1px #999999;
+}
