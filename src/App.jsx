@@ -3,6 +3,7 @@ import Accueil from './components/accueil/Accueil';
 import Panier from "./components/Panier";
 // import Product from `./components/product/Product/${id}`;
 
+import Connexion from "./components/connexion/Connexion";
 
 import './styles/Card.css'
 import './styles/Footer.css'
@@ -24,8 +25,11 @@ const router = createBrowserRouter([
   //   path: `/product/${id}`,
   //   element: <Product/>
   // }
+  {
+    path: '/connexion',
+    element: <Connexion/>
+  }
 ])
-
 
 function App() {
   return <RouterProvider router={router} />

@@ -4,6 +4,10 @@ import poubelle from'../assets/icons/trash-panier.png'
 
 function CartItem() {
   return (
+    <div>
+      <h2 className='title-panier'>Votre panier</h2>
+      <div className="border-bottom-h2"></div>
+
   <div className="cart-item-body">
     <img src={fauteuil} alt="" />
     <div className='cart-item-info'>
@@ -26,7 +30,7 @@ function CartItem() {
         </div>
 
         <div  className='cart-item-info-details div3'>
-          <p className="titre">Quantity: </p>
+          <p className="titre">Quantité: </p>
           <p>1</p>
         </div>
       </div>
@@ -34,7 +38,7 @@ function CartItem() {
         
     </div>
     
-    
+    </div>
   </div>
   );
 }

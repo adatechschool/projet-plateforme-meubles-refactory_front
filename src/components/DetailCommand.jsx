@@ -38,7 +38,7 @@ function DetailCommand(){
             <div>
                 <p className="subtitle-code-promo">Code promo</p>
                 <div>
-                    <p className="code-promo">Entrez votre code promo</p>
+                <input className="code-promo" placeholder='Entrez votre code promo' />
                 </div>
             </div>
         </div>
