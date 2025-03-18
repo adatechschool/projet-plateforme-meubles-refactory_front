@@ -1,6 +1,7 @@
 import Banner from './Banner'
 import CartItem from './CartItem'
 import DetailCommand from './DetailCommand'
+import Footer from './accueil/Footer'
 import '../styles/Panier.css'
 
 function Panier() {
@@ -11,6 +12,8 @@ function Panier() {
       <CartItem />
       <DetailCommand />
       </div>
+      <Footer />
+
     </div>
   )
 }

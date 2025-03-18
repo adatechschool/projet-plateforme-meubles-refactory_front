@@ -40,6 +40,7 @@ p{
     height: 580px;
     padding: 15px;
     border-radius: 5px;
+    margin-bottom: 50px;
     background-color: #F5F5F5;
     font-family: "poppins", sans-serif;
 }
@@ -102,6 +103,7 @@ p{
 .code-promo{
     height: 40px;
     display: flex;
+    width: 390px;
     padding-left: 14px;
     color: #999999;
     border: solid 2px;
