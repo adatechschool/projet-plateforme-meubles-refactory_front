@@ -34,15 +34,6 @@ export default function Product() {
 //fetchData();
 
 console.log("mon produit", product);
-//const cat_id = product.cat_id
-
-// useEffect(() => {
-//     const fetchCategory = async () => {
-//         const response = await fetch (`http://localhost:3000/products/`)
-//     }
-// })
-    //useState pour instancier un produit
-    //useEffect pour recuperer tous les attributs d un produit et les passer au setProduct du useState pour creer la const produit
 
 
     return (
@@ -53,6 +44,7 @@ console.log("mon produit", product);
             {product? (
                 <>
                     <div className="product-info">
+                    <img className="img-card" src={product.images} alt={product.name} />
                         <div className="product-category">TO DO</div>
                         <h1 className="product-title">{product.name}</h1>
     

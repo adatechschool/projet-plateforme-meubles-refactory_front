@@ -30,8 +30,16 @@
 
 .container-card{ /*permet de placer l'icône panier par-dessus*/
     position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-    
+
+/* Effet sur les cartes meubles sur la page d'accueil */
+.container-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
 .img-card{
     width: 320px;
     height: 320px;

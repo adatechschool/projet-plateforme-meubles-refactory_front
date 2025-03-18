@@ -1,5 +1,3 @@
-
-
 import { useNavigate } from 'react-router-dom';
 
 function Card({ product }) {
@@ -7,7 +5,7 @@ function Card({ product }) {
 
     return (
         <div 
-            className="container-card transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+            className="container-card transition-transform duration-300 ease-in-out transform cursor-pointer hover:scale-105 hover:shadow-lg"
             onClick={() => navigate(`/product/${product.id}`)}
         >
             <img className="img-card" src={product.images} alt={product.name} />
@@ -27,3 +25,4 @@ function Card({ product }) {
 }
 
 export default Card;
+
