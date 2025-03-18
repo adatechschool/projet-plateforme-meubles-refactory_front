@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.input-identifiant{
+    height: 40px;
+    display: flex;
+    width: 500px;
+    margin-bottom: 50px;
+    padding-left: 14px;
+    color: #999999;
+    border: solid 2px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: left;
+    border-color: #999999;
+    background-color: white;
+}
+
+.subtitle-identifiant{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.input-identifiant{
+    font-size: 13px;
+}
