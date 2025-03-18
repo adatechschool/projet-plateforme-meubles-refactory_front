@@ -36,3 +36,21 @@ a{
     text-transform: uppercase;
     font-family: "poppins", sans-serif;
 }
+
+.filter-content button.active {
+    border: solid 2px #749659;
+    border-radius: 20px;
+    padding: 0.2rem;
+  }
+
+.filter-content button{
+    text-decoration: none;
+    border-style: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: black;
+}
+
+.filter-content button:hover{
+    color: #749659;
+}
