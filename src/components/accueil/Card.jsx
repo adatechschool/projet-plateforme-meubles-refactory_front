@@ -1,5 +1,5 @@
 
-
+import AddProduct from "./addproduct";
 import { useNavigate } from 'react-router-dom';
 
 function Card({ product }) {
@@ -8,13 +8,10 @@ function Card({ product }) {
     return (
         <div 
             className="container-card transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
-            onClick={() => navigate(`/product/${product.id}`)}
+            // onClick={() => navigate(`/product/${product.id}`)}
         >
             <img className="img-card" src={product.images} alt={product.name} />
-            <button className="shopping-cart-button" onClick={(e) => {
-                e.stopPropagation(); // Empêche la propagation du clic vers le container
-                navigate('/panier');
-            }}></button>
+            <AddProduct  product={product} />
             <div className="description-card">
                 <div className="container-name-price-card">
                     <p className="name-card">{product.name}</p>

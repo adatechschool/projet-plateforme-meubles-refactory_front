@@ -11,7 +11,7 @@ function DetailCommand(){
 
             <div className="display-nb-article">
                 <p className="subtitle">Nombre d'articles :</p>
-                <p>cart.length</p>
+                <p>{cart.length}</p>
             </div>
             <div className="display-subtitle">
                 <p className="subtitle">Sous-total :</p>

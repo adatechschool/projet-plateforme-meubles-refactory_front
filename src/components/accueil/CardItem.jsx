@@ -18,7 +18,7 @@ function CardItem({product}){
     return(
         <div className="container-card">
         <img className="img-card" src={product.images} alt={product.name} />
-        <AddProduct className="addproduct" product={product} />
+        <AddProduct  product={product} />
         <div className="description-card">
             <div className="container-name-price-card">
             <p className="name-card">{product.name}</p>
