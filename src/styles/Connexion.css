@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container-general{
+    display: flex;
+    width: 1280px;
+    justify-content: center;
+    min-height: 100vh; /* pour centrer verticalement sur toute la hauteur */
+    margin: 0;
+}
+
+.right-container{
+    width: 500px;
+}
+
+.connection-title{
+    text-transform: uppercase;
+}
+span{
+    color: #749659;
+}

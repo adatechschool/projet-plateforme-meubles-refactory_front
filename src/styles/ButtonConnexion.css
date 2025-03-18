@@ -1,0 +1,61 @@
+a{
+    text-decoration: underline;
+}
+
+.container-button{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+.connexion-button{
+    all: unset;
+    width: 230px;
+    height: 40px;
+    color: white;
+    align-self: flex-end;
+    margin-bottom: 95px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #749659;
+}
+.connexion-button:hover{
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+.connexion-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.remember-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #999999;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.remember-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.forgot-password{
+    font-weight: 600;
+}
+
+.already-account {
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+.link-connexion{
+font-weight: 600;
+text-decoration: underline;
+}

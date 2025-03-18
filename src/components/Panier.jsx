@@ -80,6 +80,8 @@ function Panier() {
         {/* Un composant pour finaliser la commande ou afficher un total */}
         {cart.length > 0 && <DetailCommand cart={cart} />}
       </div>
+      <Footer />
+
     </div>
   );
 }
