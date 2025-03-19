@@ -1,8 +1,10 @@
 import { useState } from "react";
 import '../../styles/ButtonConnexion.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ButtonConnexion() {
+    const navigate = useNavigate(); // ✅ Ajout de useNavigate
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -22,6 +24,9 @@ function ButtonConnexion() {
                 console.log("Connexion réussie !");
                 console.log("Token reçu :", data.token);
                 localStorage.setItem("token", data.token); // Stocker le token si nécessaire
+                
+                // ✅ Redirection après connexion réussie
+                navigate("/");
             } else {
                 console.error("Erreur :", data.message);
             }

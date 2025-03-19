@@ -1,8 +1,10 @@
 import { useState } from "react";
 import '../../styles/ButtonInscription.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ButtonInscription() {
+    const navigate = useNavigate(); 
+
     const [firstname, setFirstname] = useState("");
     const [lastname, setLastname] = useState("");
     const [email, setEmail] = useState("");
@@ -19,12 +21,15 @@ function ButtonInscription() {
                 body: JSON.stringify({ firstname, lastname, email, password, adress })
             });
 
-            const data = await response.json();
+            const data = await response.json(); // ✅ Ajout de await
 
             if (response.ok) {
                 console.log("Inscription réussie !");
                 console.log("Token reçu :", data.token);
                 localStorage.setItem("token", data.token);
+                
+                // ✅ Redirection uniquement si l'inscription réussit
+                navigate("/connexion");
             } else {
                 console.error("Erreur :", data.message);
             }
