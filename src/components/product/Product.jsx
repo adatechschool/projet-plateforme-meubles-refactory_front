@@ -4,10 +4,31 @@ import Accordion from "./Accordion.jsx";
 import Banner from "../Banner.jsx";
 import Footer from "../accueil/Footer.jsx";
 import '../../styles/Product.css';
+import { useNavigate } from "react-router-dom";
 
 
 export default function Product() {
+    const navigate = useNavigate();
 
+    const handleAddToCart = () => {
+      if (!product || !product.id) {
+        console.error("Erreur : Impossible d'ajouter le produit au panier, ID manquant.");
+        return;
+      }
+  
+      let cartIds = JSON.parse(localStorage.getItem("cart")) || [];
+  
+      if (!cartIds.includes(product.id)) {
+        cartIds.push(product.id);
+        localStorage.setItem("cart", JSON.stringify(cartIds));
+        console.log(`Produit ID ${product.id} ajouté au panier !`);
+      } else {
+        console.log(`Produit ID ${product.id} est déjà dans le panier.`);
+      }
+  
+      // ✅ Rediriger vers la page panier après l'ajout
+      navigate("/panier");
+      }
     //console.log(import.meta.env.VITE_SERVER_URL)
     const { id } = useParams()
     console.log ("voici l'id", id)
@@ -55,7 +76,7 @@ console.log("mon produit", product);
                             <p className="delivery-info">Livraison en 3 jours</p>
                         </div>
     
-                        <div className="product-actions">
+                        <div className="product-actions" onClick={handleAddToCart}>
                             <button className="btn-add-to-cart">Ajouter au panier</button>
                         </div>
                         
@@ -85,4 +106,4 @@ console.log("mon produit", product);
             <Footer />
         </div>
     );
-}    
+}  
