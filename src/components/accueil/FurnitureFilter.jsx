@@ -1,7 +1,7 @@
 function FurnitureFilter(){
     return (
             <div className="filter-container">
-                <h3 className="tendances">Filtrer par catégories</h3>
+                <h2 className="tendances">Filtrer par catégories</h2>
 
                 {/* <ul className="filter-content">
                     <li><a>Chaises</a></li>
