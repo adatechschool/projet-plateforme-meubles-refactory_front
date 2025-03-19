@@ -18,7 +18,9 @@ function Card({ product }) {
                     <p className="name-card">{product.name}</p>
                     <p className="price-card">{product.price}€</p>
                 </div>
+                <div className='description-card-details'>
                 <p className="description-text-card">{product.description}</p>
+                </div>
             </div>
         </div>
     );

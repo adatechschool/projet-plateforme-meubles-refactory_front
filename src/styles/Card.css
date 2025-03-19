@@ -56,9 +56,12 @@
     width: 320px;
     height: 100px;
     box-shadow: 0px 2px 2px gainsboro;
+    
+}
+.description-card-details{
+    height: 50px;
     overflow: auto;
 }
-
 .name-card, .price-card{
     margin: 0;
     font-size: 14px;
