@@ -1,22 +1,21 @@
-import { useState, useEffect } from 'react';
 
-function Tableau() {
-
+function TableauEdit() {
     const [products, setProducts] = useState([])
   
     useEffect(() => {
-   
+    
     const fetchData = async () => {
-    const response = await fetch('http://localhost:3000/getAllCategorieOfProducts');
+    const response = await fetch('http://localhost:3000/getProduct');
     const data = await response.json();
 
     setProducts(data)
-   
+    
 };
 fetchData();
-}, []);
+}
+, []); 
 
-  return (
+return (
     <div className="bg-gray-100 text-gray-900 " >
     <div className="flex h-screen">
 
@@ -42,7 +41,7 @@ fetchData();
         <thead className="bg-black text-white text-lg">
         <tr>
 
-            <th className="font-poppins py-3 px-4 text-left  ">ID</th>
+            <th className="font-poppins py-3 px-4 text-left ">ID</th>
             <th className="font-poppins py-3 px-4 text-left ">NOM</th>
             <th className="font-poppins py-3 px-4 text-left ">PRIX</th>
             <th className="font-poppins py-3 px-4 text-left ">CATEGORIE</th>
@@ -82,4 +81,3 @@ fetchData();
 </div>
   );
 }
-export default Tableau;
