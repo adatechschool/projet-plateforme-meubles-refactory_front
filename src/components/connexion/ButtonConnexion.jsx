@@ -100,7 +100,7 @@ function ButtonConnexion() {
                 <button onClick={handleLogin} className="connexion-button">Valider</button>
 
                 <div className="already-account">
-                    <p>Je n'ai pas de compte, <Link className='link-connexion' to="/inscription">inscription</Link></p>
+                    <p className="text">Je n'ai pas de compte, <Link className='link-connexion' to="/inscription">inscription</Link></p>
                 </div>
             </div>
         </div>
