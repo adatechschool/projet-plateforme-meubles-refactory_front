@@ -14,7 +14,7 @@
 .title-container{
     display: flex;
     margin-top: 50px;
-    width: 500px;
+    width: 449px;
     flex-direction: column;
     margin-bottom: 20px;
 }
@@ -23,6 +23,7 @@
     text-transform: uppercase;
     margin-left: 6px;
     margin-bottom: 6px;
+    font-size: 25px ;
 }
 span{
     color: 749659;

@@ -32,7 +32,7 @@ const handleLogin = async () => {
 import '../../styles/ButtonConnexion.css'
 
 function ButtonConnexion() {
-    const navigate = useNavigate(); // ✅ Ajout de useNavigate
+    const navigate = useNavigate(); 
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -52,9 +52,8 @@ function ButtonConnexion() {
             if (response.ok) {
                 console.log("Connexion réussie !");
                 console.log("Token reçu :", data.token);
-                localStorage.setItem("token", data.token); // Stocker le token si nécessaire
+                localStorage.setItem("token", data.token); 
                 
-                // ✅ Redirection après connexion réussie
                 navigate("/");
             } else {
                 console.error("Erreur :", data.message);
@@ -66,20 +65,27 @@ function ButtonConnexion() {
 
     return (
         <div className="connexion-container">
+           
             <div className="connexion-inputs">
-                
-                <input
-                    type="email"
-                    placeholder="Entrez votre email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="Entrez votre mot de passe"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                <div className="input-group">
+                    <label className="input-title">Email ou nom d'utilisateur</label>
+                    <input
+                        type="email"
+                        placeholder="Entrez votre email ou votre nom d’utilisateur"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                </div>
+
+                <div className="input-group">
+                    <label className="input-title">Mot de passe</label>
+                    <input
+                        type="password"
+                        placeholder="Entrez votre mot de passe"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
             </div>
 
             <div className="connexion-actions">
@@ -94,7 +100,7 @@ function ButtonConnexion() {
                 <button onClick={handleLogin} className="connexion-button">Valider</button>
 
                 <div className="already-account">
-                    <p>J'ai déjà un compte, <Link className='link-connexion' to="/inscription">inscription</Link></p>
+                    <p>Je n'ai pas de compte, <Link className='link-connexion' to="/inscription">inscription</Link></p>
                 </div>
             </div>
         </div>

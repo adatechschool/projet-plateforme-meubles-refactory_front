@@ -1,89 +1,137 @@
-a{
-    text-decoration: underline;
-}
-
-.container-button{
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    margin-bottom: 40px;
-}
-.connexion-button{
-    all: unset;
-    width: 230px;
-    height: 40px;
-    color: white;
-    align-self: flex-end;
-    margin-bottom: 95px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 50px;
-    background-color: #749659;
-}
-.connexion-button:hover{
-    background-color: black;
-    transition: 0.3s ease;
-}
-
-.connexion-actions {
+/* Conteneur principal */
+.connexion-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    min-height: 60vh;
+    padding-left: 50px;
+    background-color: #f9f9f9;
 }
 
-.remember-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #999999;
-    width: 100%;
-    margin-bottom: 60px;
+/* Titre principal */
+.connexion-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
 }
 
-.remember-container label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
+.brand-name {
+    color: #749659;
+    font-weight: bold;
 }
 
-.forgot-password{
-    font-weight: 600;
-}
-
-.already-account {
-    margin-top: auto;
+/* Texte sous le titre */
+.connexion-subtext {
+    font-size: 14px;
+    color: #666;
     margin-bottom: 20px;
 }
-.link-connexion{
-font-weight: 600;
-text-decoration: underline;
-}
+
+/* Conteneur des champs */
 .connexion-inputs {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacement entre les inputs */
+    gap: 20px; /* Espacement entre les inputs */
+    width: 100%;
 }
 
+/* Groupement des labels et inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titres des champs */
+.input-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* Champs de saisie */
 .connexion-inputs input {
     all: unset;
-    width: 230px; /* Même largeur que le bouton connexion */
-    height: 40px;
-    padding-left: 230px;
-    color: #999999;
+    width: 350px; /* Largeur ajustée */
+    height: 45px;
+    padding: 10px 15px;
+    color: #333;
     border: solid 2px #999999;
-    border-radius: 50px;
+    border-radius: 25px;
     background-color: white;
-    font-size: 13px;
+    font-size: 15px;
     text-align: left;
 }
 
+/* Effet focus */
 .connexion-inputs input:focus {
     border-color: #749659;
     outline: none;
 }
 
+/* Placeholder */
 .connexion-inputs input::placeholder {
     color: #999999;
-    opacity: 0.7;
+    opacity: 0.8;
+}
+
+/* Conteneur des actions */
+.connexion-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+/* Bouton de connexion */
+.connexion-button {
+    all: unset;
+    width: 350px;
+    height: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #749659;
+    transition: background-color 0.3s ease;
+}
+
+.connexion-button:hover {
+    background-color: black;
+}
+
+/* "Se souvenir de moi" et "Mot de passe oublié" */
+.remember-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: #999999;
+    font-size: 14px;
+}
+
+/* Lien "Mot de passe oublié" */
+.forgot-password {
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Lien "inscription" */
+.link-connexion {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* Texte sous le formulaire */
+.already-account {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: center;
 }
