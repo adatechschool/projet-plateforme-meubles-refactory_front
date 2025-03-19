@@ -63,7 +63,7 @@ function ButtonInscription() {
 
                 <div className="input-group">
                     <label className="input-title">Email ou nom d'utilisateur</label>
-                    <input
+                    <input className="inputBody"
                         type="email"
                         placeholder="Entrez votre email ou votre nom d’utilisateur"
                         value={email}

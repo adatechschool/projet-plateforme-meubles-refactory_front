@@ -36,11 +36,11 @@
     margin-bottom: 20px;
 }
 
-span {
+.titre {
     color: #749659;
 }
 
-input {
+.inputBody {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -61,22 +61,22 @@ input {
     transition: background 0.3s;
 }
 
-button:hover {
+connexion-button:hover {
     background: #5a7d43;
 }
 
-p {
+.text {
     text-align: center;
     margin-top: 15px;
     font-size: 14px;
 }
 
-a {
+.forgot-password {
     color: #749659;
     font-weight: bold;
     text-decoration: none;
 }
 
-a:hover {
+.forgot-password:hover {
     text-decoration: underline;
 }
