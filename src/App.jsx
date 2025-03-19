@@ -8,6 +8,7 @@ import Inscription from './components/connexion/inscription';
 import Tableau from "./components/gestionDesProduits/Tableau";
 
 import Connexion from "./components/connexion/Connexion";
+import AboutUs from './components/presentation/AboutUs';
 
 import './styles/Card.css'
 import './styles/Footer.css'
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: '/admin',
     element: <Tableau/>
+  },
+  {
+    path: '/aboutus',
+    element: <AboutUs/>
   }
 ])
 
