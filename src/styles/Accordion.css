@@ -1,6 +1,6 @@
 .accordion {
     color: black;
-    width: 70vw;
+    width: 45vw;
     margin: 1rem;
 }
 
@@ -17,11 +17,12 @@
 .accordion-icon {
     font-size: 20px;
     transition: transform 0.3s ease;
+    transform: rotate(0.25turn);
 }
 
 /* Animation de la rotation de l'icône*/
 .accordion-icon.open {
-    transform: rotate(180deg);
+    transform: rotate(0.5turn);
 }
 
 /* Animation quand on affiche le contenu*/

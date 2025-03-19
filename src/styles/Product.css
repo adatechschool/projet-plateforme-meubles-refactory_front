@@ -1,12 +1,59 @@
 /* Product.css */
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
 .product-page {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
+    padding-top: 80px;
+    display: flex;
+    /* margin: auto; */
+    justify-content: space-between;
+    padding: 85px;
+    /* min-height: calc(100vh - 100px); */
+    /* padding-top:calc(150px + 1rem) */
 }
-
+.product-image{
+    order: 1;
+    padding: 10px;
+    width: 77%;
+    /* justify-content: space-between; */
+}
+.product-category{
+    color:#E3753F;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
+.product-title{
+    text-transform: uppercase;
+    border-bottom: 1px;
+    margin-left: 15px;
+}
+.product-pricing{
+    margin-left: 15px;
+}
+.product-actions{
+    margin-left: 15px;
+}
+.image-card{
+        width: 460px;
+        height: 460px;
+}
+.product-info{
+    order: 2;
+    padding: 10x;
+    width: 75%;
+    /* margin: 5%; */
+    /* justify-content: space-between; */
+}
 .product-accordions {
     display: flex;
+    /* justify-content: space-between; */
     flex-direction: column;
     gap: 1.5rem;
     margin: 2rem 0;
@@ -25,7 +72,26 @@
     padding: 1rem 0;
     font-size: 1rem;
 }
-
+.btn-add-to-cart{
+    all: unset;
+    width: 230px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #749659;
+}
+.btn-add-to-cart:hover{
+    background-color: black;
+    transition: 0.3s ease;
+}
+.container-footer{
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+}
 @media (max-width: 768px) {
     .product-page {
         padding: 1rem;
@@ -33,5 +99,13 @@
 
     .accordion-title {
         font-size: 1.1rem;
+    }
+    .container-footer {
+        flex-direction: column; /* Empile les divs sur mobile */
+        align-items: center;
+    }
+    .product-image, .product-info {
+        width: 100%; /* Pleine largeur sur mobile */
+        margin-bottom: 10px;
     }
 }
