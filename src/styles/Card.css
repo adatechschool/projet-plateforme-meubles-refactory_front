@@ -88,3 +88,27 @@
 .shopping-cart-button:hover{
     background-image: url('../assets/icons/shopping-cart-button-hover.png');
 }
+
+.container-show-more-button{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.show-more-button{
+    all: unset;
+    width: 230px;
+    height: 40px;
+    color: white;
+    align-self:center;
+    margin-bottom: 50px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    background-color: black;
+}
+.show-more-button:hover{
+    background-color: #749659;
+    transition: 0.3s ease;
+}
