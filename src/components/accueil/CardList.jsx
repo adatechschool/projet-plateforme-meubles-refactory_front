@@ -1,41 +1,59 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Card from './Card';
 
+function CardList() {
+  const [products, setProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(""); // État pour la catégorie sélectionnée
 
+  useEffect(() => {
+    const fetchData = async () => {
+      let url = 'http://localhost:3000/products';
+      if (selectedCategory) {
+        url = `http://localhost:3000/products/category/${selectedCategory}`;
+      }
 
-function CardList(){
-
-    const [products, setProducts] = useState([])
-  
-
-    useEffect(() => {
-       
-       
-        const fetchData = async () => {
-        const response = await fetch('http://localhost:3000/products');
-        const data = await response.json();
-    
-        setProducts(data)
-      
-       
+      const response = await fetch(url);
+      const data = await response.json();
+      setProducts(data);
     };
-    fetchData();
-    }, []);
-console.log("liste de produits", products);
 
-    return (
-     
-        <div className='center-cards'>
+    fetchData();
+  }, [selectedCategory]); // Se déclenche quand la catégorie change
+
+  return (
+    <div>
+      {/* Bannière avec les boutons pour filtrer */}
+      <div className="filter-content">
+        <button className={`filter-item ${selectedCategory === "" ? "active" : ""}`} 
+        onClick={() => setSelectedCategory("")}>Tous les produits</button>
+
+        <button className={`filter-item ${selectedCategory === "assises" ? "active" : ""}`} 
+        onClick={() => setSelectedCategory("assises")}>Assises</button>
+
+        <button className={`filter-item ${selectedCategory === "rangements" ? "active" : ""}`} 
+        onClick={() => setSelectedCategory("rangements")}>Meubles de rangement</button>
+
+        <button className={`filter-item ${selectedCategory === "decorations" ? "active" : ""}`} 
+        onClick={() => setSelectedCategory("decorations")}>Décorations</button>
+
+        <button className={`filter-item ${selectedCategory === "tables" ? "active" : ""}`} 
+        onClick={() => setSelectedCategory("tables")}>Tables et bureaux</button>
+
+        <button 
+        className={`filter-item ${selectedCategory === "lits" ? "active" : ""}`} 
+        onClick={() => setSelectedCategory("lits")}>Lits</button>
+      </div>
+
+      {/* Liste des produits filtrés */}
+      <div className="center-cards">
         <div className="container-all-cards">
-        { products.map((product) => (
-        <Card key={product.id} product={product}/>)
-       )}
-        
-       
-        </div> 
-        </div>  
-    )
-    
+          {products.map((product) => (
+            <Card key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
-export default CardList
+
+export default CardList;
