@@ -2,6 +2,7 @@ import '../styles/Banner.css'
 import userConnextion from '../assets/icons/user.png'
 import panier from '../assets/icons/shopping-cart.png'
 import recherche from '../assets/icons/loupe.png'
+import { Link } from 'react-router-dom'
 
 function Banner() {
   return (
@@ -14,7 +15,7 @@ function Banner() {
         <div className="nav">
             <nav>
             <ul className='navList'>
-                <li><a href="#">ACCUEIL</a></li>
+                <li><Link to="/">ACCUEIL</Link></li>
                 <li><a href="#">TENDANCES</a></li>
                 <li><a href="#">COLLECTION</a></li>
                 <li><a href="#">QUI SOMMES-NOUS?</a></li>
@@ -24,8 +25,8 @@ function Banner() {
 
         <div className="ButtonsLink">
             <a className='buttonRecherche' href="#"><img src={recherche} alt="" /></a>
-            <a className='buttonPanier' href="#"><img src={panier} alt="" /></a>
-            <a className='buttonConnexion' href="#"><img src={userConnextion} alt="" /></a>
+            <Link className="buttonPanier" to="/panier"><img src={panier} alt="Panier" /></Link>
+            <Link className='buttonConnexion' to="/connexion"><img src={userConnextion} alt="" /></Link>
         </div>
     </div>
 
