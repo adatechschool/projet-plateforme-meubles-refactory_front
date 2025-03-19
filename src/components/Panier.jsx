@@ -5,6 +5,7 @@ import DetailCommand from './DetailCommand';
 import '../styles/Panier.css';
 import Footer from "../components/accueil/Footer";
 
+
 function Panier() {
   const [cart, setCart] = useState([]);       // Stocke les produits à afficher
   const [loading, setLoading] = useState(true);

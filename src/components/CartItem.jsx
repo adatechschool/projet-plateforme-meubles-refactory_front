@@ -1,4 +1,5 @@
 import '../styles/CartItem.css';
+import deleteIcon from "/src/assets/icons/trash-panier.png"; // ✅ Import de la nouvelle icône
 
 function CartItem({ item, onRemove }) {
   console.log("Produit affiché dans le panier :", item);
@@ -42,10 +43,10 @@ function CartItem({ item, onRemove }) {
           </div>
         </div>
 
-        {/* Bouton de suppression */}
-        <button className='buttonRemove' onClick={onRemove}>
-          Supprimer
-        </button>
+        {/* Icône de suppression */}
+        <div className='buttonRemove' onClick={onRemove}>
+          <img src={deleteIcon} alt="Supprimer" className="delete-icon" />
+        </div>
       </div>
     </div>
   );
