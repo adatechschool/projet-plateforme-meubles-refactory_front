@@ -1,55 +1,54 @@
 import '../styles/CartItem.css';
+import deleteIcon from "/src/assets/icons/trash-panier.png"; // ✅ Import de la nouvelle icône
 
 function CartItem({ item, onRemove }) {
+  console.log("Produit affiché dans le panier :", item);
+
   return (
-    <div>
-      <h2 className='title-panier'>Votre panier</h2>
-      <div className="border-bottom-h2"></div>
+    <div className="cart-item-body">
+      {/* Afficher l’image s’il y en a une, sinon fallback */}
+      <img
+        src={item.images || "https://via.placeholder.com/150"}
+        alt={item.name}
+        className="cart-item-img"
+      />
 
-  <div className="cart-item-body">
-    <img src={fauteuil} alt="" />
-    <div className='cart-item-info'>
-
-        <div className='titre titrePrix '>
+      <div className='cart-item-info'>
+        {/* Nom et prix */}
+        <div className='titre titrePrix'>
           <p>{item.name}</p>
           <div className='cart-item-info-details prix'>
             <p>{item.price}€</p>
           </div>
         </div>
 
+        {/* Informations supplémentaires */}
         <div className='cart-item-info-groupe'>
+          {/* Catégorie */}
           <div className='cart-item-info-details div1'>
             <p className="titre">Catégorie:</p> 
-            <p>{item.category || "Non spécifiée"}</p>
+            <p>{item.categories_name || "Non spécifiée"}</p>
           </div>
 
+          {/* Matériau */}
           <div className='cart-item-info-details div2'>
-            <p className="titre">Couleur:</p>
-            <p>{item.color || "Non spécifiée"}</p>
+            <p className="titre">Matière :</p>
+            <p>{item.materials_name || "Non spécifié"}</p>
           </div>
 
+          {/* Couleur */}
           <div className='cart-item-info-details div3'>
-            <p className="titre">Quantité:</p>
-            <p>1</p>
+            <p className="titre">Couleur :</p>
+            <p>{item.colors_name || "Non spécifiée"}</p>
           </div>
         </div>
 
-        <div  className='cart-item-info-details div2'>
-          <p className="titre">Couleur:</p>
-          <p> Noir</p>
+        {/* Icône de suppression */}
+        <div className='buttonRemove' onClick={onRemove}>
+          <img src={deleteIcon} alt="Supprimer" className="delete-icon" />
         </div>
-
-        <div  className='cart-item-info-details div3'>
-          <p className="titre">Quantité: </p>
-          <p>1</p>
-        </div>
-      </div>
-        <button className='buttonRemove'><img src={poubelle} alt="" /></button> 
-        
       </div>
     </div>
-    
-  
   );
 }
 
