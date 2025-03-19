@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Accueil from './components/accueil/Accueil';
 import Panier from "./components/Panier";
 import Product from "./components/product/Product";
-
+import Inscription from './components/connexion/inscription';
 import Connexion from "./components/connexion/Connexion";
 
 import './styles/Card.css'
@@ -28,7 +28,12 @@ const router = createBrowserRouter([
   {
     path: '/connexion',
     element: <Connexion/>
+  },
+  {
+    path: '/inscription',
+    element: <Inscription/>
   }
+  
 ])
 
 function App() {

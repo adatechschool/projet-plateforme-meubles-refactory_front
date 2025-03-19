@@ -1,9 +1,7 @@
 import '../styles/CartItem.css';
 
 function CartItem({ item, onRemove }) {
-  // "item" contient tout : id, name, price, category, material_id, colour_id, images, etc.
-  // Vérifie dans la console :
-  console.log("Produit du panier :", item);
+  console.log("Produit affiché dans le panier :", item);
 
   return (
     <div className="cart-item-body">
@@ -23,23 +21,24 @@ function CartItem({ item, onRemove }) {
           </div>
         </div>
 
-        {/* Afficher la catégorie s’il y en a une */}
+        {/* Informations supplémentaires */}
         <div className='cart-item-info-groupe'>
+          {/* Catégorie */}
           <div className='cart-item-info-details div1'>
             <p className="titre">Catégorie:</p> 
-            <p>{item.category_id || "Non spécifiée"}</p>
+            <p>{item.categories_name || "Non spécifiée"}</p>
           </div>
 
-          {/* Material ID ou le nom du matériau s’il existait */}
+          {/* Matériau */}
           <div className='cart-item-info-details div2'>
             <p className="titre">Matière :</p>
-            <p>{item.material_id || "Non spécifié"}</p>
+            <p>{item.materials_name || "Non spécifié"}</p>
           </div>
 
-          {/* Colour ID ou une valeur par défaut */}
+          {/* Couleur */}
           <div className='cart-item-info-details div3'>
             <p className="titre">Couleur :</p>
-            <p>{item.colour_id || "Non spécifiée"}</p>
+            <p>{item.colors_name || "Non spécifiée"}</p>
           </div>
         </div>
 

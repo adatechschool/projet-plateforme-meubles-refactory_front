@@ -1,0 +1,97 @@
+.inscription-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inscription-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacement entre le label et l'input */
+}
+
+.input-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.inscription-inputs input {
+    all: unset;
+    width: 230px;
+    height: 40px;
+    padding-left: 14px;
+    color: #999999;
+    border: solid 2px #999999;
+    border-radius: 50px;
+    background-color: white;
+    font-size: 13px;
+    text-align: left;
+}
+
+.inscription-inputs input:focus {
+    border-color: #749659;
+    outline: none;
+}
+
+.inscription-inputs input::placeholder {
+    color: #999999;
+    opacity: 0.7;
+}
+
+.inscription-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px; /* Décale le bouton vers le bas */
+}
+
+.inscription-button {
+    all: unset;
+    width: 230px;
+    height: 45px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    background-color: #749659;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Ajoute un espace entre les inputs et le bouton */
+}
+
+.inscription-button:hover {
+    background-color: black;
+}
+
+.already-account {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.link-connexion {
+    font-weight: 600;
+    text-decoration: underline;
+    color: #749659;
+    cursor: pointer;
+}
+
+.link-connexion:hover {
+    color: black;
+}

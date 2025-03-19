@@ -4,18 +4,19 @@ import BackgroundConnexion from "./BackgroundConnexion";
 import ButtonConnexion from "./ButtonConnexion";
 import Footer from "../accueil/Footer"; 
 
-import '../../styles/Connexion.css'
+import '../../styles/inscription.css'
+import ButtonInscription from "./ButtonInscription";
 
 
-function Connexion() {
+function Inscription() {
     return (
       <div>
         <div className="container-general">
         <BackgroundConnexion />
           <div className="right-container">
         <ConnexionTitle />
-        
-        <ButtonConnexion />
+
+        <ButtonInscription />
         </div>
         </div>
         <Footer />
@@ -23,4 +24,4 @@ function Connexion() {
     );
 }
 
-export default Connexion;
+export default Inscription;
