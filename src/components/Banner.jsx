@@ -2,6 +2,7 @@ import '../styles/Banner.css'
 import userConnextion from '../assets/icons/user.png'
 import panier from '../assets/icons/shopping-cart.png'
 import recherche from '../assets/icons/loupe.png'
+import { Link } from "react-router";
 
 function Banner() {
   return (
@@ -17,7 +18,7 @@ function Banner() {
                 <li><a href="#">ACCUEIL</a></li>
                 <li><a href="#">TENDANCES</a></li>
                 <li><a href="#">COLLECTION</a></li>
-                <li><a href="#">QUI SOMMES-NOUS?</a></li>
+                <li><Link to="/aboutus">QUI SOMMES-NOUS?</Link></li>
             </ul>
             </nav>
         </div>

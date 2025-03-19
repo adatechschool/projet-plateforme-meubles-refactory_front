@@ -1,0 +1,54 @@
+*{
+    font-family: "poppins", sans-serif;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2rem;
+    padding-top: 2rem;
+}
+
+.team-name{
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.presentation-container{
+    display: flex;
+    padding-left: 5rem;
+    padding-right:5rem;
+    padding-bottom: 5rem;
+}
+
+.team-logo{
+    height: 400px;
+    width: 400px;
+}
+
+.presentation-text{
+    padding-left: 3rem;
+}
+
+.h3-style{
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+.formation-list{
+    list-style: inside;
+    padding-left: 2rem;
+}
+.formation-list li{
+    padding-left: 2rem;
+}
+
+.name-list{
+    list-style: inside;
+    padding-left: 2rem;
+}
+.name-list li{
+    padding-left: 2rem;
+}
