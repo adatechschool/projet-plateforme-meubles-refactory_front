@@ -47,7 +47,7 @@ console.log("mon produit", product);
                     </div>
 
                     <div className="product-info">
-                        <div className="product-category">CATÉGORIES : {product.categories_name}</div>
+                        <div className="product-category">CATÉGORIE : {product.categories_name}</div>
                         <h1 className="product-title">{product.name}</h1>
     
                         <div className="product-pricing">
