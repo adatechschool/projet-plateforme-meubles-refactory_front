@@ -34,15 +34,13 @@ const router = createBrowserRouter([
     element: <Connexion/>
   },
   {
-
     path: '/inscription',
     element: <Inscription/>
-
+  },
+  {
     path: '/admin',
     element: <Tableau/>
-
   }
-  
 ])
 
 function App() {
