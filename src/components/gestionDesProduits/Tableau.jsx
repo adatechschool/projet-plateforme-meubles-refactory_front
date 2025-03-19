@@ -22,11 +22,10 @@ fetchData();
 
     <div className="bg-gray-200 text-slate-900 w-80 p-6">
        <h2 className=" font-poppins justify-center text-xl font-bold mb-6 mt-10 px-3">Tableau de bord</h2>
-           {/*<li className = "list-none" ><a href="#" className="text-l flex items-center py-5 px-3 hover:bg-blue-400 rounded-lg"><i className="font-popins fas fa-tachometer-alt mr-3"></i> Tableau de bord</a></li>*/}
-           <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover:text-lime-600"><i className="font-poppins fa-solid fa-user mr-3"></i> Clients</a></li>
+           <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover:text-lime-600 font-semibold"><i className="font-poppins fa-solid fa-user mr-3"></i> Clients</a></li>
            <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover: text-lime-600"><i className="font-poppins  fa-solid  fas fa-cogs mr-3"></i><strong>Gestion des produits</strong></a></li>
-           <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover:text-lime-600"><i className="font-poppins fa-solid fa-box mr-3"></i> Commandes</a></li>
-           <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover:text-lime-600"><i className="font-poppins fa-solid fa-right-from-bracket mr-3"></i> Retour à la boustique</a></li>
+           <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover:text-lime-600 font-semibold"><i className="font-poppins fa-solid fa-box mr-3"></i> Commandes</a></li>
+           <li className = "list-none"><a href="#" className="text-l flex items-center py-2 px-3 hover:text-lime-600 font-semibold"><i className="font-poppins fa-solid fa-right-from-bracket mr-3"></i> Retour à la boustique</a></li>
        <div className="mt-6">
        <button onclick="logout()" className="rounded-3xl font-popins text-l w-full bg-rose-700 hover:scale-105 hover:shadow-lg text-white px-4 py-2 shadow-md"> 
            Déconnexion
@@ -38,6 +37,7 @@ fetchData();
     <div className="overflow-hidden rounded-lg shadow-lg bg-white  w-full p-4 flex justify-center">
     <div className="w-[80%] ">
     <h2 className="font-poppins text-2xl font-bold mb-6 border-b-2 border-gray-400 pb-3">Gestion des produits</h2>
+<div className="overflow-y-auto  h-[calc(100vh-180px)]">
     <table className="w-full table-auto border-collapse justify-center border border-gray-300 rounded-2xl">
         <thead className="bg-black text-white text-lg">
         <tr>
@@ -51,22 +51,22 @@ fetchData();
 
         </tr>
         </thead>
-        <tbody className="divide-y divide-gray-300">
+        <tbody className="divide-y divide-gray-300 overscroll-y-auto">
 
         { products.map((product) => (
             <tr className="hover:bg-gray-100 transition duration-200">
 
-                <td className="font-poppins py-3 px-4">{product.id}</td>
-                <td className="font-poppins py-3 px-4">{product.name}</td>
-                <td className="font-poppins py-3 px-4">{product.price}€</td>
-                <td className="font-poppins py-3 px-4">{product.categories_name}</td>
-                <td className="font-poppins py-3 px-4">{product.colors_name}</td>
+                <td className="font-poppins py-3 px-4"><input readOnly type = "text"  className="w-6"value={product.id}/></td>
+                <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.name.length} value={product.name}/></td>
+                <td className="font-poppins py-3 px-4"><input readOnly type = "text" className='w-10' value={`${product.price}€`}  /></td>
+                <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.categories_name.length} value={product.categories_name}/></td>
+                <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.colors_name.length} value={product.colors_name}/></td>
                 
                 <td className="py-3 px-4 flex space-x-1 justify-center">
-                    <a href="#>" className="font-poppins bg-lime-600 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                    <a href={`/admin?id=${product.id}`} className="font-poppins bg-lime-600 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
                         ✏️ 
                     </a>
-                    <a href="#>" className="font-poppins bg-rose-700 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-rose-950 transition duration-200" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette collecte ?');">
+                    <a href={`/admin?id=${product.id}`} className="font-poppins bg-rose-700 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-rose-950 transition duration-200" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette collecte ?');">
                         🗑️
                     </a>
                 </td>
@@ -75,6 +75,7 @@ fetchData();
 
         </tbody>
     </table>
+</div>
 </div>
 </div>
 </div>
