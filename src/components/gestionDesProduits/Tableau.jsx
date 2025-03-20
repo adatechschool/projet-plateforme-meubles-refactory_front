@@ -1,22 +1,42 @@
 import { useState, useEffect } from 'react';
 
+let params = new URLSearchParams(document.location.search);
+let id = params.get("id");
+
+//const nameRef = useRef();
+//let priceRef = useRef();
+//let categoryNameRef = useRef();
+//let colorRef = useRef();
+function changeProduct(formData) {
+    //const name = nameRef.current.value
+    //const price = priceRef.current.value
+    //const categoryName = categoryNameRef.current.value
+    //const color = colorRef.current.value
+
+    //console.log(name, price, categoryName, color, id)
+    console.log(id, formData);
+};
+
+const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+        changeProduct();
+    }
+};
+
+
 function Tableau() {
 
     const [products, setProducts] = useState([])
   
     useEffect(() => {
-   
-    const fetchData = async () => {
-    const response = await fetch('http://localhost:3000/getAllCategorieOfProducts');
-    const data = await response.json();
-
-    setProducts(data)
-   
-};
-fetchData();
-}, []);
-
-  return (
+        const fetchData = async () => {
+            const response = await fetch('http://localhost:3000/getAllCategorieOfProducts');
+            const data = await response.json();
+            setProducts(data)
+        };
+        fetchData();
+    }, []);
+    return (
     <div className="bg-gray-100 text-gray-900 " >
     <div className="flex h-screen">
 
@@ -38,6 +58,7 @@ fetchData();
     <div className="w-[80%] ">
     <h2 className="font-poppins text-2xl font-bold mb-6 border-b-2 border-gray-400 pb-3">Gestion des produits</h2>
 <div className="overflow-y-auto  h-[calc(100vh-180px)]">
+<form action={changeProduct}>
     <table className="w-full table-auto border-collapse justify-center border border-gray-300 rounded-2xl">
         <thead className="bg-black text-white text-lg">
         <tr>
@@ -53,28 +74,52 @@ fetchData();
         </thead>
         <tbody className="divide-y divide-gray-300 overscroll-y-auto">
 
-        { products.map((product) => (
-            <tr className="hover:bg-gray-100 transition duration-200">
+        { products.map((product) => 
+        {
+            if (product.id == id) {
+return (
+    <tr className="hover:bg-gray-100 transition duration-200">
+        <td className="font-poppins py-3 px-4"><input readOnly type = "text"  className="w-6"value={product.id}/></td>
+        <td className="font-poppins py-3 px-4"><input name="name" type = "text" size={product.name.length} defaultValue={product.name} onKeyDown={handleKeyDown} /></td>
+        <td className="font-poppins py-3 px-4"><input name="price" type = "text" className='w-10' defaultValue={`${product.price}€`} onKeyDown={handleKeyDown} /></td>
+        <td className="font-poppins py-3 px-4"><input name="categoryName" type = "text" size={product.categories_name.length} defaultValue={product.categories_name} onKeyDown={handleKeyDown} /></td>
+        <td className="font-poppins py-3 px-4"><input name="color" type = "text" size={product.colors_name.length} defaultValue={product.colors_name} onKeyDown={handleKeyDown} /></td>
+        
+        <td className="py-3 px-4 flex space-x-1 justify-center">
+            <a href={`/admin?id=${product.id}`} className="font-poppins bg-lime-600 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                ✏️ 
+            </a>
+            <button type="submit">🗑️</button>
+        </td>
+    </tr>
+)
+            } else {
+return (
+    <tr className="hover:bg-gray-100 transition duration-200">
 
-                <td className="font-poppins py-3 px-4"><input readOnly type = "text"  className="w-6"value={product.id}/></td>
-                <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.name.length} value={product.name}/></td>
-                <td className="font-poppins py-3 px-4"><input readOnly type = "text" className='w-10' value={`${product.price}€`}  /></td>
-                <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.categories_name.length} value={product.categories_name}/></td>
-                <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.colors_name.length} value={product.colors_name}/></td>
-                
-                <td className="py-3 px-4 flex space-x-1 justify-center">
-                    <a href={`/admin?id=${product.id}`} className="font-poppins bg-lime-600 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
-                        ✏️ 
-                    </a>
-                    <a href={`/admin?id=${product.id}`} className="font-poppins bg-rose-700 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-rose-950 transition duration-200" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette collecte ?');">
-                        🗑️
-                    </a>
-                </td>
-            </tr>
-        ))}
+        <td className="font-poppins py-3 px-4"><input readOnly type = "text"  className="w-6"value={product.id}/></td>
+        <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.name.length} value={product.name}/></td>
+        <td className="font-poppins py-3 px-4"><input readOnly type = "text" className='w-10' value={`${product.price}€`}  /></td>
+        <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.categories_name.length} value={product.categories_name}/></td>
+        <td className="font-poppins py-3 px-4"><input readOnly type = "text" size={product.colors_name.length} value={product.colors_name}/></td>
+        
+        <td className="py-3 px-4 flex space-x-1 justify-center">
+            <a href={`/admin?id=${product.id}`} className="font-poppins bg-lime-600 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200">
+                ✏️ 
+            </a>
+            <a href={`/admin?id=${product.id}`} className="font-poppins bg-rose-700 hover:scale-105 hover:shadow-lg text-white px-4 py-2 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-rose-950 transition duration-200" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette collecte ?');">
+                🗑️
+            </a>
+        </td>
+    </tr>
+)
+            }   
+        }
+        )}
 
         </tbody>
     </table>
+    </form>
 </div>
 </div>
 </div>
