@@ -26,6 +26,7 @@
     border-bottom: solid 1px #999999;
     /*padding-right: 1.0rem;*/
     position: relative;
+    margin-bottom: 1.5rem;
 }
 .cart-item-info{
     display: flex;

@@ -12,10 +12,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-a{
+/*a{
     color: black;
     text-decoration: none;
-}
+}*/
 
 .tendances{
     text-align: center;
