@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../../styles/ButtonInscription.css';
+import '../../styles/Buttoninscription.css';
 import { Link, useNavigate } from "react-router-dom";
 
 function ButtonInscription() {
